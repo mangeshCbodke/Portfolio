@@ -289,25 +289,48 @@
       <b>Already locally based in Manila (Self-relocated); Available for in-person interviews and immediate joining</b>
     </div>
 
-  </div>
+ </div>
     </div>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <script>
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
-        backToTopBtn.style.display = "flex";
-      } else {
-        backToTopBtn.style.display = "none";
-      }
-    });
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+<style>
+  #backToTop {
+    position: fixed;
+    bottom: 110px;
+    left: 90%;                /* center horizontally */
+    transform: translateX(-50%);
+    background: #0a66c2;      /* LinkedIn blue, change to #ff0066 if you prefer accent pink */
+    color: #fff;
+    border: none;
+    border-radius: 50%;       /* round shape */
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: none;            /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  #backToTop:hover { background: #004080; }
+</style>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+      backToTopBtn.style.display = "flex";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 </body>
 </html>
 
