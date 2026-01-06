@@ -1,197 +1,107 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8" />
-
 <title>Mangesh C Bodke | Professional Profile</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-
 <link rel="stylesheet"
-
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-
-
 <style>
-
 /* ================= BASE RESET ================= */
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 img { max-width: 100%; height: auto; display: block; }
 
-
-
 /* ================= THEME ================= */
 
 :root {
-
   --bg: #e8d9c4;
-
   --card: #f4f4f4;
-
   --text: #333;
-
   --muted: #555;
-
   --primary: #0a66c2;
-
   --accent: #ff0066;
-
   --border: #ccc;
-
 }
-
-
 
 body {
 
   font-family: 'Roboto','Segoe UI',Tahoma,sans-serif;
-
   background: var(--bg);
-
   color: var(--text);
-
   line-height: 1.6;
-
 }
-
-
 
 .container {
-
   width: 94%;
-
   max-width: 1100px;
-
   margin: 0 auto;
-
 }
-
-
-
+ 
 /* ================= BANNER ================= */
 
 .banner {
-
   position: relative;
-
   overflow: hidden;
-
 }
-
+ 
 .banner img {
-
   width: 100%;
-
   border-bottom: 4px solid var(--border);
-
   -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent);
-
   mask-image: linear-gradient(to bottom, #000 75%, transparent);
-
 }
-
-
 
 /* ================= HEADER ================= */
 
 .header-info {
-
   text-align: center;
-
   margin: 20px 0;
-
 }
-
-
 
 .name {
-
   font-size: 2rem;
-
   font-weight: 700;
-
 }
-
-
 
 .contact-row {
-
   margin-top: 10px;
-
   display: grid;
-
   gap: 6px;
-
 }
-
-
 
 .contact-row a,
-
 .contact-row div {
-
   font-size: 0.95rem;
-
   text-decoration: none;
-
   color: var(--text);
-
 }
-
-
 
 .buttons {
-
   margin-top: 18px;
-
   display: flex;
-
   flex-direction: column;
-
   gap: 12px;
-
 }
-
-
 
 .btn {
-
   padding: 12px 18px;
-
   border-radius: 24px;
-
   font-weight: 600;
-
   color: #fff;
-
   text-decoration: none;
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 8px;
-
 }
 
-
-
 .resume-btn { background: var(--accent); }
-
 .linkedin-btn { background: var(--primary); }
-
 .intro-btn { background: #444; }
-/* ================= CARDS ================= */
+
+ /* ================= CARDS ================= */
 .card {
   background: var(--card);
   margin: 16px 0;
@@ -214,14 +124,16 @@ body {
   padding-left: 18px;
   margin-top: 8px;
 }
-/* ================= LOGOS (FIXED) ================= */
+
+ /* ================= LOGOS (FIXED) ================= */
 .logo {
   max-width: 110px;
   max-height: 32px;
   object-fit: contain;
   margin: 8px 0;
 }
-/* ================= PROJECT DOWNLOADS ================= */
+
+ /* ================= PROJECT DOWNLOADS ================= */
 .project-downloads {
   margin-top: 12px;
   display: flex;
@@ -240,17 +152,19 @@ body {
   color: var(--primary);
   text-decoration: none;
 }
-/* ================= FOOTER ================= */
+
+ /* ================= FOOTER ================= */
 
 .footer {
-
   margin: 30px 0 20px;
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
 }
-/* ================= BACK TO TOP ================= */
-#backToTop {
+
+ /* ================= BACK TO TOP ================= */
+
+ #backToTop {
   position: fixed;
   bottom: 90px;
   right: 20px;
@@ -265,7 +179,8 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
-/* ================= DESKTOP (SCALE ONLY) ================= */
+
+ /* ================= DESKTOP (SCALE ONLY) ================= */
 
 @media (min-width: 768px) {
   .name { font-size: 2.6rem; }
