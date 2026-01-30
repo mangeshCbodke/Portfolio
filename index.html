@@ -8,6 +8,93 @@
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+
+ <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', 'G-MGEM9EW3BT', {
+  anonymize_ip: true,
+  transport_type: 'beacon'
+});
+
+/* =============================
+   EVENT TRACKING
+============================= */
+
+// Resume Download Tracking
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll("a.resume-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      gtag('event', 'resume_download', {
+        event_category: 'engagement',
+        event_label: 'Resume PDF'
+      });
+    });
+  });
+
+  // LinkedIn Click Tracking
+  document.querySelectorAll("a.linkedin-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      gtag('event', 'linkedin_click', {
+        event_category: 'engagement',
+        event_label: 'LinkedIn Profile'
+      });
+    });
+  });
+
+  // Introduction Video Tracking
+  document.querySelectorAll("a.intro-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      gtag('event', 'intro_video_download', {
+        event_category: 'engagement',
+        event_label: 'Introduction Video'
+      });
+    });
+  });
+
+  // Outbound Link Tracking (for all external links)
+  document.querySelectorAll("a[target='_blank']").forEach(link => {
+    link.addEventListener("click", function () {
+      gtag('event', 'outbound_click', {
+        event_category: 'engagement',
+        event_label: link.href
+      });
+    });
+  });
+
+});
+
+
+/* =============================
+   SCROLL DEPTH TRACKING
+============================= */
+
+let scrollMarks = [25, 50, 75, 100];
+let scrollTracked = [];
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+  let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  let scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+  scrollMarks.forEach(function(mark) {
+    if (scrollPercent >= mark && !scrollTracked.includes(mark)) {
+      scrollTracked.push(mark);
+      gtag('event', 'scroll_depth', {
+        event_category: 'engagement',
+        event_label: mark + '%',
+        value: mark
+      });
+    }
+  });
+});
+</script>
  
 /* ================= BASE RESET ================= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
